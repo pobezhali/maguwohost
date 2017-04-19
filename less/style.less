@@ -1,0 +1,341 @@
+@font-face
+{
+    font-family: 'Rockwell MT';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/RockwellMT.eot');
+    src: url('../fonts/RockwellMT.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RockwellMT.woff2') format('woff2'),
+    url('../fonts/RockwellMT.woff') format('woff'),
+    url('../fonts/RockwellMT.ttf') format('truetype'),
+    url('../fonts/RockwellMT.svg#RockwellMT') format('svg');
+}
+
+
+
+.btn(@color-bg)
+{
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    text-transform: uppercase;
+
+    color: inherit;
+    background-color: @color-bg;
+    &:hover
+    {
+        text-decoration: none;
+    }
+}
+
+.link
+{
+    color: inherit;
+    &:hover
+    {
+        text-decoration: none;
+    }
+}
+
+
+
+.font-base--bold
+{
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-weight: 700;
+}
+.font-base--semi
+{
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-weight: 600;
+}
+.font-base--reg
+{
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+.font-lato--bold
+{
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 700;
+}
+.font-rockwell--reg
+{
+    font-family: 'Rockwell';
+    font-weight: 400;
+}
+
+.list-inline
+{
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+@brand-color-secondary: rgb(255, 225, 62);
+@brand-color-main: rgb(32, 34, 66);
+@txt-light: rgb(255, 255, 255);
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+ul
+{
+    list-style: none;
+}
+
+html
+{
+    font-size: 10px;
+}
+
+body
+{
+    margin-right: auto;
+    margin-left: auto;
+
+    color: @brand-color-main;
+}
+
+.container
+{
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.logo
+{
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+
+.main-navigation
+{
+    position: relative;
+
+    padding-top: 65px;
+    padding-bottom: 63px;
+
+    text-align: center;
+    &__list
+    {
+        &-item
+        {
+            margin-right: 15px;
+
+            .list-inline;
+        }
+        &-item:last-child
+        {
+            margin-right: 0;
+        }
+    }
+    &__link
+    {
+        font-size: 1.6rem;
+        line-height: 1.5;
+
+        text-transform: uppercase;
+
+        .link;
+        .font-base--reg;
+        &--active
+        {
+            color: @brand-color-secondary;
+        }
+    }
+    &::after
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 2px;
+        height: 100%;
+
+        content: '';
+
+        background-color: #ebebeb;
+    }
+}
+
+.callback
+{
+    padding-top: 31px;
+    padding-bottom: 31px;
+    &__title
+    {
+        font-size: 1.2rem;
+
+        margin-bottom: 22px;
+
+        .font-base--semi;
+    }
+    &__btn
+    {
+        font-size: 14px;
+
+        position: relative;
+
+        margin-right: 20px;
+
+        .btn(@brand-color-secondary);
+        .list-inline;
+        .font-base--semi;
+        &::after
+        {
+            position: absolute;
+            top: 0;
+            right: -20px;
+
+            width: 2px;
+            height: 100%;
+
+            content: '';
+
+            background-color: #ebebeb;
+        }
+    }
+    &__phone
+    {
+        font-size: 2.4rem;
+        line-height: 1;
+
+        margin-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        text-align: left;
+
+        color: @brand-color-main;
+
+        .list-inline;
+        .font-lato--bold;
+    }
+}
+
+.promo
+{
+    min-height: 794px;
+    padding-top: 234px;
+    padding-bottom: 141px;
+
+    text-align: center;
+
+    color: @txt-light;
+    background: rgb(186, 186, 186) url('../img/bg-promo.jpg') center center no-repeat;
+    background-size: cover;
+    &__title
+    {
+        font-size: 4.8rem;
+        line-height: 1;
+
+        margin-bottom: 34px;
+
+        .font-rockwell--reg;
+    }
+    &__text
+    {
+        font-size: 3rem;
+        line-height: 1;
+
+        position: relative;
+
+        margin-bottom: 230px;
+
+        color: @txt-light;
+
+        .font-base--reg;
+        &::after
+        {
+            position: absolute;
+            top: 8rem;
+            left: 50%;
+
+            width: 110px;
+            height: 110px;
+
+            content: '';
+            transform: translateX(-50%);
+
+            background: url('../img/figure.svg') center center no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.search
+{
+    font-size: 0;
+
+    width: 572px;
+    height: 90px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 18px;
+
+    background-color: rgba(255, 255, 255, .5);
+    &__field
+    {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+
+        display: inline-block;
+
+        width: 274px;
+        height: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        vertical-align: top;
+
+        color: #000;
+        border: none;
+        
+        background-color: #fff;
+    }
+    &__dotcom
+    {
+        font-size: 1.8rem;
+        line-height: 5rem;
+
+        display: inline-block;
+
+        width: 108px;
+        height: 100%;
+
+        vertical-align: middle;
+
+        color: @brand-color-main;
+        
+        background-color: @brand-color-secondary;
+
+        .font-base--bold;
+    }
+    &__btn
+    {
+        font-size: 1.4rem;
+
+        display: inline-block;
+
+        width: 154px;
+        height: 100%;
+
+        vertical-align: middle;
+
+        color: @txt-light;
+        
+        background-color: @brand-color-secondary;
+
+        .font-base--semi;
+    }
+}
